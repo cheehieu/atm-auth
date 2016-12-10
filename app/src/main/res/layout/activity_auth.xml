@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="edu.gatech.atmauth.AuthActivity">
+
+    <Button
+        android:text="Fingerprint"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_fingerprint"
+        android:drawableLeft="@drawable/point_up"
+        android:background="@color/colorFlatGrey"
+        android:padding="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textView_auth"
+        android:onClick="click_fingerprint"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Access Code"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_qr"
+        android:drawableLeft="@drawable/qrcode"
+        android:background="@color/colorFlatGrey"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/button_fingerprint"
+        android:onClick="click_access_code"
+        android:layout_centerHorizontal="true" />
+
+    <!--<Button-->
+        <!--android:text="Access Code"-->
+        <!--android:layout_width="180dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/button_access_code"-->
+        <!--android:drawableLeft="@drawable/qrcode"-->
+        <!--android:background="@color/colorFlatGrey"-->
+        <!--android:padding="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_below="@+id/button_qr"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+    <Button
+        android:text="NFC"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_nfc"
+        android:drawableLeft="@drawable/connection"
+        android:background="@color/colorFlatGrey"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/button_qr"
+        android:onClick="click_nfc"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Bank Card"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_bank_card"
+        android:drawableLeft="@drawable/credit_card"
+        android:background="@color/colorFlatGrey"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/button_nfc"
+        android:onClick="click_card"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Choose a method for\nATM authentication:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_auth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        android:textStyle="normal|bold|italic"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:background="@color/colorFlatBlue"
+        android:drawableStart="@drawable/shield"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!--NFC, bank card, -->
+
+
+</RelativeLayout>

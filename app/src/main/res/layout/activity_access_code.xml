@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fingerprint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="edu.gatech.atmauth.AccessCodeActivity">
+
+    <TextView
+        android:text="Scan this access code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        android:textStyle="normal|bold|italic"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:background="@color/colorFlatBlue"
+        android:drawableStart="@drawable/qrcode"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="[click on access code to simulate scanning your phone on an ATM's scanner]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_helper"
+        android:textStyle="normal|italic"
+        android:layout_below="@+id/imageButton_scan"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textAlignment="center" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/access_code"
+        android:id="@+id/imageButton_scan"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:onClick="click_access_code"
+        android:layout_below="@+id/textView_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/background_light" />
+
+    <ProgressBar
+        style="@android:style/Widget.Material.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/progressBar"
+        android:layout_alignTop="@+id/imageButton_scan"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.atmauth.HomeActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gt_logo_sm"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bank of HCI"
+        android:id="@+id/textView_bank"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo"
+        android:textStyle="normal|bold|italic"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageButton"
+        android:onClick="click_null"
+        android:background="@android:color/white" />
+
+    <Button
+        android:text="Transfer"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_transfer"
+        android:drawableTop="@drawable/tab"
+        android:background="@color/colorFlatRed"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:onClick="click_null"
+        android:layout_alignBaseline="@+id/button_inquiry"
+        android:layout_alignBottom="@+id/button_inquiry"
+        android:layout_alignStart="@+id/button_deposit" />
+
+    <Button
+        android:text="Withdraw"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:id="@+id/button_withdraw"
+        android:drawableTop="@drawable/download2"
+        android:background="@color/colorFlatGreen"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_below="@+id/textView_bank"
+        android:onClick="click_withdraw"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Deposit"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_deposit"
+        android:drawableTop="@drawable/upload2"
+        android:background="@color/colorFlatYellow"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_alignBaseline="@+id/button_withdraw"
+        android:layout_alignBottom="@+id/button_withdraw"
+        android:onClick="click_null"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Balance Inquiry"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:id="@+id/button_inquiry"
+        android:drawableTop="@drawable/question"
+        android:background="@color/colorFlatBlue"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:onClick="click_null"
+        android:layout_below="@+id/button_withdraw"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Find an ATM"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_find"
+        android:drawableTop="@drawable/location"
+        android:layout_marginTop="9dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:onClick="click_null"
+        android:background="@color/colorFlatOrange"
+        android:layout_below="@+id/button_inquiry"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ellipses"
+        android:id="@+id/imageButton2"
+        android:onClick="click_null"
+        android:background="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Authentication"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/atm_sm"
+        android:id="@+id/button_auth"
+        android:background="@color/colorFlatGrey"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:onClick="click_auth"
+        android:layout_alignBaseline="@+id/button_find"
+        android:layout_alignBottom="@+id/button_find"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
